@@ -1,0 +1,79 @@
+﻿@model Form.Models.Student
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Create</h2>
+
+@using (Html.BeginForm())
+{
+    <table>
+        <tr>
+            <td>@Html.LabelFor(x => x.Name)</td>
+            <td>@Html.TextBoxFor(x => x.Name)</td>
+            <td>@Html.ValidationMessageFor(x => x.Name)</td>
+        </tr>
+        <tr>
+            <td>@Html.LabelFor(x => x.Email)</td>
+            <td>@Html.TextBoxFor(x => x.Email)</td>
+            <td>@Html.ValidationMessageFor(x => x.Name)</td>
+        </tr>
+        <tr>
+            <td>@Html.LabelFor(x => x.Address)</td>
+            <td>@Html.TextAreaFor(x => x.Address)</td>
+            <td>@Html.ValidationMessageFor(x => x.Name)</td>
+        </tr>
+        <tr>
+            <td>@Html.LabelFor(x => x.Department)</td>
+            <td>
+                @Html.DropDownListFor(x => x.Department, new SelectList(ViewBag.Departmet, "Id", "DeptName"),"ONE SELECT",new { @class = "btn btn-primary", @id= "DeptNameId" })
+            </td>
+            <td>@Html.ValidationMessageFor(x => x.Name)</td>
+        </tr>
+        <tr>
+            <td>@Html.LabelFor(x => x.Gender)</td>
+            <td>
+                @Html.RadioButtonFor(x => x.Gender, "Male") male
+                @Html.RadioButtonFor(x => x.Gender, "Female") female
+            </td>
+            <td>@Html.ValidationMessageFor(x => x.Name)</td>
+        </tr>
+        <tr>
+            <td>
+                <select name="studentId" id="studentId">
+                    <option value="">Select....</option>
+                </select>
+            </td>
+            <td>
+                <input type="submit" name="" value="Save" />
+            </td>
+        </tr>
+    </table>
+}
+@section scripts{
+    <script>
+        $(document).ready(function () {
+           
+            $("#DeptNameId").change(function () {
+                var deptId = $("#DeptNameId").val();
+                var json = { deptID: deptId };
+                $.ajax({
+                    type: "POST",
+                    url: '@Url.Action("GetStudentByDeptId", "Default")',
+                    contentType: "application/json; charset=utf-8",
+                    data: JSON.stringify(json),
+                    success: function (data) {
+                        $('#studentId').empty();
+                        $.each(data, function (key, value) {
+                            $('#studentId').append("<option value=" + value.Id + '>' + value.Name +'</Option>')
+                        })
+                    }
+                })
+            })
+        })
+    </script>
+    
+    }
+<script src="~/Scripts/jquery-3.2.1.min.js"></script>
+<script src="~/Scripts/jquery.validate.min.js"></script>
+<script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
