@@ -1,1 +1,0 @@
-Server=tcp:btms.database.windows.net,1433;Initial Catalog=btms;Persist Security Info=False;User ID=rakib;Password=Rkb@1234;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;
