@@ -1,0 +1,409 @@
+﻿<br /><br /><br /><br />
+    <link href="../Content/PrintPage.css" rel="stylesheet" />
+    <link href="../Content/seatblock.css" rel="stylesheet" />
+    <script src="../scripts/AngularScripts/SearchBus/SeatBookng.js"></script>
+    <!--======================Ticket Print=======================-->
+    <div ng-show="TicketPurchase">
+        <!--====================Ticket No=====================-->
+        <div  style="background-color:rgba(255, 255, 255,.7)" class="SearchTicket">
+            <h2>Ticket purchase successfully!!</h2>
+            <h4>
+                Importent!!
+            </h4>
+            <p>Please Save your ticket no.</p>
+            <h3>Your ticket No: {{TicketNoPrint}}</h3>
+            <p>Please Collect ticket 2 hours later</p>
+            <a target="_blank" style="font-size:20px;" class="fa fa-print" href="#/Print">Collect Ticket</a>
+            <hr />
+        </div>
+       
+        <!--====================Ticket No=====================-->
+
+        <div class="col-md-offset-3 col-md-7">
+            <div id="PrintTicket">
+                <!--==============Ticket=============-->
+                <!--<table style="border-style:double; align-items:center">
+                    <tr>
+                        <td colspan="3" align="Center" style="border-bottom: 2px solid gray; padding-bottom:1px ">
+                            <img src="../Layout/images/Logo/logo.png" style="width:170px;" />
+                            <p><b>7<span style="color:#93ca3a">C</span>ity</b></p>
+                        </td>
+                        <td align="left" colspan="3" style="color:dimgray;border-bottom: 2px solid gray; padding-bottom: 5px">
+                            <b> The 7City Inc.</b><br>
+                            Jatrabari, Dhaka,Bangladesh<br />
+                            <span>Telephone:</span> +88 01710462677<br />
+                            <span>FAX:</span> +1 800 889 9898<br />
+                            E-mail: <a href="#">rakib@gmail.com</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="Rgap">
+                            Ticket Number
+                        </td>
+                        <td class="arial18">
+                            :
+                        </td>
+                        <td colspan="4" class="redText">
+                            <span>
+                                <strong>
+                                    {{TransactionList[0].TicketNo}}
+                                </strong>
+                            </span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="arial18">
+                            Location
+                        </td>
+                        <td class="arial18">
+                            :
+                        </td>
+                        <td colspan="4">
+                            <span>
+                                <strong>
+                                    <span ng-repeat="L in LList | filter: { Id: TransactionList[0].DepartureLocationId} : true">
+                                        <span>{{L.LocationName}}</span>
+                                    </span> To
+                                    <span ng-repeat="L in LList | filter: { Id: TransactionList[0].DestinationLocationId} : true">
+                                        <span>{{L.LocationName}}</span>
+                                    </span>
+                                </strong>
+                            </span>
+                        </td>
+
+                    </tr>
+                    <tr>
+                        <td class="arial18">
+                            Type
+                        </td>
+                        <td class="arial18">
+                            :
+                        </td>
+                        <td>
+                            <span>
+                                <strong>
+                                    <span ng-repeat="B in PBusList | filter: { Id: TransactionList[0].BusId} :true ">
+                                        <span>{{B.BusType}}</span>
+                                    </span>
+                                </strong>
+                            </span>
+                        </td>
+                        <td class="gap">
+                            Booking Date
+                        </td>
+                        <td class="arial18">
+                            :
+                        </td>
+                        <td class="Lgap">
+                            <span>
+                                <strong>
+                                    {{TransactionList[0].BookingDate|date : 'dd.MM.y'}}
+                                </strong>
+                            </span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="arial18">
+                            Joutney Date
+                        </td>
+                        <td class="arial18">
+                            :
+                        </td>
+                        <td>
+                            <span>
+                                <strong>
+                                    {{TransactionList[0].TravelDate|date : 'dd.MM.y'}}
+                                </strong>
+                            </span>
+                        </td>
+                        <td class="gap">
+                            Journey Time
+                        </td>
+                        <td class="arial18 ">
+                            :
+                        </td>
+                        <td class="Lgap">
+                            <span><strong>{{TransactionList[0].Time|| 'NoData'}}</strong></span>
+                        </td>
+
+                    </tr>
+                    <tr>
+                        <td class="arial18">
+                            Seat No
+                        </td>
+                        <td class="arial18">
+                            :
+                        </td>
+                        <td>
+                            <span>
+                                <strong>
+                                    {{TransactionList[0].ReservedSeat}}
+                                </strong>
+                            </span>
+                        </td>
+                        <td class="gap">
+                            No.of Passengers
+                        </td>
+                        <td class="arial18">
+                            :
+                        </td>
+                        <td class="Lgap">
+                            <span>
+                                <strong>
+                                    {{TransactionList[0].ReservedSeat.length/2|| 'NoData'}}
+                                </strong>
+                            </span>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="arial18">
+                            Total Rent
+                        </td>
+                        <td class="arial18">
+                            :
+                        </td>
+                        <td class="redText">
+                            <span>
+                                <strong>
+                                    {{TransactionList[0].AmountTaka}}
+                                </strong>
+                            </span>
+                        </td>
+                        <td colspan="3" class="BusTag Lgap">Connection people with people</td>
+                    </tr>
+                </table>-->
+                <!--==============Ticket=============-->
+            </div>
+            <br />
+            <input ng-show="TransactionList[0].ReservedSeat != null" type="button" value="Print" class="btn" onclick="PrintDiv('PrintTicket')" />
+        </div>
+        <!--==========print Contents script=============-->
+        <div class="col-md-12">                         <!--//CheckThis may not needed-->
+            <script>
+                function PrintDiv(divname)
+                {
+                    var printContents = document.getElementById(divname).innerHTML;
+                    var oldPage = document.body.innerHTML;
+                    document.body.innerHTML = "<html><head><title></title></head><body>" + printContents + "</body></html>";
+                    window.print();
+                    document.body.innerHTML = oldPage;
+                }
+            </script>
+            <br />
+            <hr />
+            <hr />
+        </div>
+        <!--==========print Contents script=============-->
+    </div>
+    <!--======================Ticket Print=======================-->
+
+    
+<div class="col-md-12"></div>
+<div id="newsletter">
+    <!--<div class="title">
+        <h2 class="wow bounce"></h2>
+        <p class="wow fadeIn" data-wow-delay="0.6s"></p>
+    </div>-->
+    <div class="container">
+        <div class="row">
+            <div>
+                <div ng-hide="TicketPurchase">
+
+                    <!--==========Ticket Purchase==============-->
+                    <div class="col-md-4">
+                        <input type="text" hidden ng-model="Search.Id" />
+
+                        <div ng-hide="ShowDiv">
+                            <!--<br /><br /><br /><br />-->
+                            <label style="text-align:left">Time:</label>
+                            <select ng-change="TimeFilter()" class="drop2 form-control" ng-model="Search.Time"
+                                    ng-options="B.DepartureTime as B.DepartureTime +  ' - '  + B.ArrivalTime for B in BusScheduleList">
+                                <option value="" disabled selected>--- Select Departure Time ---</option>
+                            </select>
+                            <button class="btn btn-success button2 drop2" ng-click="TimeFilterAgain()">Next</button>
+
+                            <!--<br /><br /><br /><br />-->
+                        </div>
+
+                        <div ng-show="ShowDiv">
+                            <div ng-hide="ShowDiv2">
+                                <!--<br /><br /><br /><br />-->
+                                <label> Bus Type:</label>
+                                <select class="drop2 form-control" ng-model="Search.BusId"
+                                        ng-options="b.Id as b.BusType + ' -' + b.BusScheduleId for b in QueryBusList">
+                                    <option value="" disabled selected>--- Select Bus Type ---</option>
+                                </select>
+
+                                <label>Departure Location:</label>
+                                <select class="drop2 form-control" ng-disabled="Search.BusId == null" ng-model="Search.DepartureLocationId"
+                                        ng-options="l.Id as l.LocationName for l in LocationList">
+                                    <option value="" disabled selected>--- Select Departure Location ---</option>
+                                </select>
+
+                                <label>Destination Location:</label>
+                                <select ng-change="ShowFare()" class="drop2 form-control" ng-disabled="Search.DepartureLocationId == null" ng-model="Search.DestinationLocationId"
+                                        ng-options="l.Id as l.LocationName disable when l.Id == Search.DepartureLocationId for l in LocationList">
+                                    <option value="" disabled selected>--- Select  Destination Location ---</option>
+                                </select>
+                                <label ng-show="AmountDiv" style="color:darkorchid">{{SearchFareList[0].TotalAmount|| 'No bus Found on this route'}}</label><br />
+
+                                <div ng-show="SearchFareList[0].TotalAmount">
+                                    <label>Travel Date:</label>
+                                    <input type="text" class="drop2 form-control" ng-disabled="Search.DestinationLocationId == null" placeholder="YYYY-MM-DD" ng-model="Search.TravelDate" />
+                                    <button class="btn btn-success button2 drop2" ng-show="Search.TravelDate != null" ng-click="busSeat()">Next</button>
+                                </div>
+                                <!--<br /><br /><br /><br />-->
+                            </div>
+                        </div>
+
+                        <div ng-show="ShowDiv2">
+                            <div ng-hide="ShowDiv3">
+                                <!--<br /><br /><br /><br />-->
+                                <label>Reserved Seat:</label>
+                                <input disabled id="seat" type="text" class="drop2 form-control" placeholder="Select Seat for Reserve" />
+                                <button ng-show="Search.ReservedSeat != null" class="btn btn-danger drop2" ng-click="Search.ReservedSeat = ''" onclick="cancelBlock()">Cancel Seat</button>
+
+                                <div ng-show="Search.ReservedSeat != null">
+                                    <br />
+                                    <div style="color:dimgray"> Please pay <b style="color:#93ca3a"> {{SearchFareList[0].TotalAmount}}</b> USD/per seat</div>
+                                    <form action="https://www.sandbox.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                                        <input type="hidden" name="cmd" value="_s-xclick">
+                                        <input type="hidden" name="hosted_button_id" value="V4JLF4E78NZMS">
+                                        <input ng-click="ShowDiv3 = true" formtarget="_blank" type="image" src="https://www.sandbox.paypal.com/en_US/i/btn/btn_paynowCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+                                        <img alt="" border="0" src="https://www.sandbox.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1">
+                                    </form>
+                                </div>
+                                <!--<br /><br /><br /><br />-->
+                            </div>
+                        </div>
+
+
+                        <!--PaymentId:-->
+                        <!--<select class="drop2 form-control" ng-model="Search.PaymentId"
+                    ng-options="P.Id as P.Id for P in PaymentList">
+                <option value="" disabled selected>--- Select Payment ---</option>
+            </select>-->
+                        <!--<input type="text" class="form-control" placeholder="Enter PaymentId" ng-model="Search.PaymentId = Pid " />-->
+                        <!--<select class="drop2 form-control" ng-model="Search.UserName"
+                    ng-options="P.Id as P.Email for P in PassengerList">
+                <option value="" disabled selected>--- Select Passenger ---</option>
+            </select>-->
+                        <div ng-show="ShowDiv3">
+                            <!--<br /><br /><br /><br />-->
+                            <input type="text" class="form-control" placeholder="Enter your Name" ng-model="Search.UserName" />
+
+                            <input type="text" hidden ng-model="Payment.Id" />
+                            <input type="email" class="form-control" placeholder="Paypal email" ng-model="Payment.Email" />
+                            <input type="text" class="form-control" placeholder="Receipt number" ng-model="Payment.Code" />
+
+                            <button class="btn btn-success" ng-click="SaveSearch()">Purchase</button>
+                            <!--<br /><br /><br /><br />-->
+                        </div>
+
+                    </div>
+                    <!--==========Ticket Purchase==============-->
+                    <!--======================Bus Seat======================-->
+                    <div ng-show="ShowDiv2" class="col-md-3">
+                        <table ng-hide="ShowDiv3" class="BusSeat">
+                            <tbody>
+                                <tr>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td style="width:50px">
+                                        <a onclick="alert('Driver Here')">
+                                            <img src="../Content/Seat/selected_seat_img.gif" />
+                                        </a>Driver
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="singleSeat"><a id="A1anchor" ng-click="Search.ReservedSeat = Search.ReservedSeat + 'A1'" onclick="A1clickBlock()"><img src="../Content/Seat/available_seat_img.gif" /></a><br />A1</td>
+                                    <td class="singleSeat"><a id="A2anchor" ng-click="Search.ReservedSeat = Search.ReservedSeat + 'A2'" onclick="A2clickBlock()"><img src="../Content/Seat/available_seat_img.gif" /></a><br />A2</td>
+                                    <td width="40px"></td>
+                                    <td class="singleSeat"><a id="A4anchor" ng-click="Search.ReservedSeat = Search.ReservedSeat + 'A4'" onclick="A4clickBlock()"><img src="../Content/Seat/available_seat_img.gif" /></a><br />A4</td>
+                                    <td class="singleSeat"><a id="A3anchor" ng-click="Search.ReservedSeat = Search.ReservedSeat + 'A3'" onclick="A3clickBlock()"><img src="../Content/Seat/available_seat_img.gif" /></a><br />A3</td>
+                                </tr>
+                                <tr>
+                                    <td class="singleSeat"><a id="B1anchor" ng-click="Search.ReservedSeat = Search.ReservedSeat + 'B1'" onclick="B1clickBlock()"><img src="../Content/Seat/available_seat_img.gif" /></a><br />B1</td>
+                                    <td class="singleSeat"><a id="B2anchor" ng-click="Search.ReservedSeat = Search.ReservedSeat + 'B2'" onclick="B2clickBlock()"><img src="../Content/Seat/available_seat_img.gif" /></a><br />B2</td>
+                                    <td width="40px"></td>
+                                    <td class="singleSeat"><a id="B3anchor" ng-click="Search.ReservedSeat = Search.ReservedSeat + 'B3'" onclick="B3clickBlock()"><img src="../Content/Seat/available_seat_img.gif" /></a><br />B3</td>
+                                    <td class="singleSeat"><a id="B4anchor" ng-click="Search.ReservedSeat = Search.ReservedSeat + 'B4'" onclick="B4clickBlock()"><img src="../Content/Seat/available_seat_img.gif" /></a><br />B4</td>
+                                </tr>
+                                <tr>
+                                    <td class="singleSeat"><a id="C1anchor" ng-click="Search.ReservedSeat = Search.ReservedSeat + 'C1'" onclick="C1clickBlock()"><img src="../Content/Seat/available_seat_img.gif" /></a><br />C1</td>
+                                    <td class="singleSeat"><a id="C2anchor" ng-click="Search.ReservedSeat = Search.ReservedSeat + 'C2'" onclick="C2clickBlock()"><img src="../Content/Seat/available_seat_img.gif" /></a><br />C2</td>
+                                    <td class="singleSeat" width="40px"></td>
+                                    <td class="singleSeat"><a id="C3anchor" ng-click="Search.ReservedSeat = Search.ReservedSeat + 'C3'" onclick="C3clickBlock()"><img src="../Content/Seat/available_seat_img.gif" /></a><br />C3</td>
+                                    <td class="singleSeat"><a id="C4anchor" ng-click="Search.ReservedSeat = Search.ReservedSeat + 'C4'" onclick="C4clickBlock()"><img src="../Content/Seat/available_seat_img.gif" /></a><br />C4</td>
+                                </tr>  
+                                <tr>   
+                                    <td class="singleSeat"><a id="D1anchor" ng-click="Search.ReservedSeat = Search.ReservedSeat + 'D1'" onclick="D1clickBlock()"><img src="../Content/Seat/available_seat_img.gif" /></a><br />D1</td>
+                                    <td class="singleSeat"><a id="D2anchor" ng-click="Search.ReservedSeat = Search.ReservedSeat + 'D2'" onclick="D2clickBlock()"><img src="../Content/Seat/available_seat_img.gif" /></a><br />D2</td>
+                                    <td class="singleSeat" width="40px"></td>
+                                    <td class="singleSeat"><a id="D3anchor" ng-click="Search.ReservedSeat = Search.ReservedSeat + 'D3'" onclick="D3clickBlock()"><img src="../Content/Seat/available_seat_img.gif" /></a><br />D3</td>
+                                    <td class="singleSeat"><a id="D4anchor" ng-click="Search.ReservedSeat = Search.ReservedSeat + 'D4'" onclick="D4clickBlock()"><img src="../Content/Seat/available_seat_img.gif" /></a><br />D4</td>
+                                </tr>
+                                <tr>
+                                    <td class="singleSeat"><a id="E1anchor" ng-click="Search.ReservedSeat = Search.ReservedSeat + 'E1'" onclick="E1clickBlock()"><img src="../Content/Seat/available_seat_img.gif" /></a><br />E1</td>
+                                    <td class="singleSeat"><a id="E2anchor" ng-click="Search.ReservedSeat = Search.ReservedSeat + 'E2'" onclick="E2clickBlock()"><img src="../Content/Seat/available_seat_img.gif" /></a><br />E2</td>
+                                    <td class="singleSeat" width="40px"></td>
+                                    <td class="singleSeat"><a id="E3anchor" ng-click="Search.ReservedSeat = Search.ReservedSeat + 'E3'" onclick="E3clickBlock()"><img src="../Content/Seat/available_seat_img.gif" /></a><br />E3</td>
+                                    <td class="singleSeat"><a id="E4anchor" ng-click="Search.ReservedSeat = Search.ReservedSeat + 'E4'" onclick="E4clickBlock()"><img src="../Content/Seat/available_seat_img.gif" /></a><br />E4</td>
+                                </tr>   
+                                <tr>    
+                                    <td class="singleSeat"><a id="F1anchor" ng-click="Search.ReservedSeat = Search.ReservedSeat + 'F1'" onclick="F1clickBlock()"><img src="../Content/Seat/available_seat_img.gif" /></a><br />F1</td>
+                                    <td class="singleSeat"><a id="F2anchor" ng-click="Search.ReservedSeat = Search.ReservedSeat + 'F2'" onclick="F2clickBlock()"><img src="../Content/Seat/available_seat_img.gif" /></a><br />F2</td>
+                                    <td class="singleSeat" width="40px"></td>
+                                    <td class="singleSeat"><a id="F3anchor" ng-click="Search.ReservedSeat = Search.ReservedSeat + 'F3'" onclick="F3clickBlock()"><img src="../Content/Seat/available_seat_img.gif" /></a><br />F3</td>
+                                    <td class="singleSeat"><a id="F4anchor" ng-click="Search.ReservedSeat = Search.ReservedSeat + 'F4'" onclick="F4clickBlock()"><img src="../Content/Seat/available_seat_img.gif" /></a><br />F4</td>
+                                </tr>   
+                                <tr>    
+                                    <td class="singleSeat"><a id="G1anchor" ng-click="Search.ReservedSeat = Search.ReservedSeat + 'G1'" onclick="G1clickBlock()"><img src="../Content/Seat/available_seat_img.gif" /></a><br />G1</td>
+                                    <td class="singleSeat"><a id="G2anchor" ng-click="Search.ReservedSeat = Search.ReservedSeat + 'G2'" onclick="G2clickBlock()"><img src="../Content/Seat/available_seat_img.gif" /></a><br />G2</td>
+                                    <td class="singleSeat" width="40px"></td>
+                                    <td class="singleSeat"><a id="G3anchor" ng-click="Search.ReservedSeat = Search.ReservedSeat + 'G3'" onclick="G3clickBlock()"><img src="../Content/Seat/available_seat_img.gif" /></a><br />G3</td>
+                                    <td class="singleSeat"><a id="G4anchor" ng-click="Search.ReservedSeat = Search.ReservedSeat + 'G4'" onclick="G4clickBlock()"><img src="../Content/Seat/available_seat_img.gif" /></a><br />G4</td>
+                                </tr>   
+                                <tr>    
+                                    <td class="singleSeat"><a id="H1anchor" ng-click="Search.ReservedSeat = Search.ReservedSeat + 'H1'" onclick="H1clickBlock()"><img src="../Content/Seat/available_seat_img.gif" /></a><br />H1</td>
+                                    <td class="singleSeat"><a id="H2anchor" ng-click="Search.ReservedSeat = Search.ReservedSeat + 'H2'" onclick="H2clickBlock()"><img src="../Content/Seat/available_seat_img.gif" /></a><br />H2</td>
+                                    <td class="singleSeat" width="40px"></td>
+                                    <td class="singleSeat"><a id="H3anchor" ng-click="Search.ReservedSeat = Search.ReservedSeat + 'H3'" onclick="H3clickBlock()"><img src="../Content/Seat/available_seat_img.gif" /></a><br />H3</td>
+                                    <td class="singleSeat"><a id="H4anchor" ng-click="Search.ReservedSeat = Search.ReservedSeat + 'H4'" onclick="H4clickBlock()"><img src="../Content/Seat/available_seat_img.gif" /></a><br />H4</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <!--======================Bus Seat======================-->
+                    <!--====================================-->
+
+                    <!--<div class="col-md-5" style="text-align:justify; float:right; color:dimgrey">
+
+                        Our aim to bring you to your destination quickly and comfortably. In order to ensure everyone can travel as pleasantly as possible, company rules apply. These company rules are based on the Passenger Transport Act 2000, Sections 70 to 73.
+
+                        For your own safety, you must follow the instructions issued by Companys staff at all times.<br /><br />
+
+                        <b>No smoking </b><br />
+
+                        Smoking at the metro stations and in the Companys vehicles is not permitted. This includes 7City buses. The e-cigarette is also included in the ban and therefore prohibited.<br /><br />
+
+                        <b>Noise nuisance</b><br />
+
+                        Producing excessive noise levels is not permitted.<br /><br />
+
+                        <b>Food and drink</b><br />
+
+                        On the 7City-bus, you are not allowed to eat or drink anything that can cause damage to the bus or your fellow passengers.<br /><br />
+
+                        <b>No vomiting</b> <br />
+
+                        Keep the 7City bus clean and pleasant for yourself and your fellow passengers. Therefore: try not to be sick, please.
+                    </div>-->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

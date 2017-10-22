@@ -1,0 +1,120 @@
+C:\Users\MD. Rakib HASAN\Desktop\18.7.17\BTRS\BTRS-Client\bin\ApplicationInsights.config
+C:\Users\MD. Rakib HASAN\Desktop\18.7.17\BTRS\BTRS-Client\bin\roslyn\csc.exe
+C:\Users\MD. Rakib HASAN\Desktop\18.7.17\BTRS\BTRS-Client\bin\roslyn\csc.exe.config
+C:\Users\MD. Rakib HASAN\Desktop\18.7.17\BTRS\BTRS-Client\bin\roslyn\csc.rsp
+C:\Users\MD. Rakib HASAN\Desktop\18.7.17\BTRS\BTRS-Client\bin\roslyn\csi.exe
+C:\Users\MD. Rakib HASAN\Desktop\18.7.17\BTRS\BTRS-Client\bin\roslyn\csi.rsp
+C:\Users\MD. Rakib HASAN\Desktop\18.7.17\BTRS\BTRS-Client\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\MD. Rakib HASAN\Desktop\18.7.17\BTRS\BTRS-Client\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\MD. Rakib HASAN\Desktop\18.7.17\BTRS\BTRS-Client\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\MD. Rakib HASAN\Desktop\18.7.17\BTRS\BTRS-Client\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\MD. Rakib HASAN\Desktop\18.7.17\BTRS\BTRS-Client\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\MD. Rakib HASAN\Desktop\18.7.17\BTRS\BTRS-Client\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\MD. Rakib HASAN\Desktop\18.7.17\BTRS\BTRS-Client\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\MD. Rakib HASAN\Desktop\18.7.17\BTRS\BTRS-Client\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\MD. Rakib HASAN\Desktop\18.7.17\BTRS\BTRS-Client\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\MD. Rakib HASAN\Desktop\18.7.17\BTRS\BTRS-Client\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\MD. Rakib HASAN\Desktop\18.7.17\BTRS\BTRS-Client\bin\roslyn\System.AppContext.dll
+C:\Users\MD. Rakib HASAN\Desktop\18.7.17\BTRS\BTRS-Client\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\MD. Rakib HASAN\Desktop\18.7.17\BTRS\BTRS-Client\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\MD. Rakib HASAN\Desktop\18.7.17\BTRS\BTRS-Client\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\MD. Rakib HASAN\Desktop\18.7.17\BTRS\BTRS-Client\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\MD. Rakib HASAN\Desktop\18.7.17\BTRS\BTRS-Client\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\MD. Rakib HASAN\Desktop\18.7.17\BTRS\BTRS-Client\bin\roslyn\vbc.exe
+C:\Users\MD. Rakib HASAN\Desktop\18.7.17\BTRS\BTRS-Client\bin\roslyn\vbc.exe.config
+C:\Users\MD. Rakib HASAN\Desktop\18.7.17\BTRS\BTRS-Client\bin\roslyn\vbc.rsp
+C:\Users\MD. Rakib HASAN\Desktop\18.7.17\BTRS\BTRS-Client\bin\roslyn\VBCSCompiler.exe
+C:\Users\MD. Rakib HASAN\Desktop\18.7.17\BTRS\BTRS-Client\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\MD. Rakib HASAN\Desktop\18.7.17\BTRS\BTRS-Client\bin\BTRS-Client.dll.config
+C:\Users\MD. Rakib HASAN\Desktop\18.7.17\BTRS\BTRS-Client\bin\BTRS-Client.dll
+C:\Users\MD. Rakib HASAN\Desktop\18.7.17\BTRS\BTRS-Client\bin\BTRS-Client.pdb
+C:\Users\MD. Rakib HASAN\Desktop\18.7.17\BTRS\BTRS-Client\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Users\MD. Rakib HASAN\Desktop\18.7.17\BTRS\BTRS-Client\bin\Microsoft.AI.DependencyCollector.dll
+C:\Users\MD. Rakib HASAN\Desktop\18.7.17\BTRS\BTRS-Client\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\MD. Rakib HASAN\Desktop\18.7.17\BTRS\BTRS-Client\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Users\MD. Rakib HASAN\Desktop\18.7.17\BTRS\BTRS-Client\bin\Microsoft.AI.Web.dll
+C:\Users\MD. Rakib HASAN\Desktop\18.7.17\BTRS\BTRS-Client\bin\Microsoft.AI.WindowsServer.dll
+C:\Users\MD. Rakib HASAN\Desktop\18.7.17\BTRS\BTRS-Client\bin\Microsoft.ApplicationInsights.dll
+C:\Users\MD. Rakib HASAN\Desktop\18.7.17\BTRS\BTRS-Client\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\MD. Rakib HASAN\Desktop\18.7.17\BTRS\BTRS-Client\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\MD. Rakib HASAN\Desktop\18.7.17\BTRS\BTRS-Client\bin\System.Web.Helpers.dll
+C:\Users\MD. Rakib HASAN\Desktop\18.7.17\BTRS\BTRS-Client\bin\System.Web.Mvc.dll
+C:\Users\MD. Rakib HASAN\Desktop\18.7.17\BTRS\BTRS-Client\bin\System.Web.Razor.dll
+C:\Users\MD. Rakib HASAN\Desktop\18.7.17\BTRS\BTRS-Client\bin\System.Web.Webpages.Deployment.dll
+C:\Users\MD. Rakib HASAN\Desktop\18.7.17\BTRS\BTRS-Client\bin\System.Web.Webpages.dll
+C:\Users\MD. Rakib HASAN\Desktop\18.7.17\BTRS\BTRS-Client\bin\System.Web.Webpages.Razor.dll
+C:\Users\MD. Rakib HASAN\Desktop\18.7.17\BTRS\BTRS-Client\bin\Microsoft.AI.DependencyCollector.xml
+C:\Users\MD. Rakib HASAN\Desktop\18.7.17\BTRS\BTRS-Client\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\Users\MD. Rakib HASAN\Desktop\18.7.17\BTRS\BTRS-Client\bin\Microsoft.AI.Web.xml
+C:\Users\MD. Rakib HASAN\Desktop\18.7.17\BTRS\BTRS-Client\bin\Microsoft.AI.WindowsServer.xml
+C:\Users\MD. Rakib HASAN\Desktop\18.7.17\BTRS\BTRS-Client\bin\Microsoft.ApplicationInsights.xml
+C:\Users\MD. Rakib HASAN\Desktop\18.7.17\BTRS\BTRS-Client\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\MD. Rakib HASAN\Desktop\18.7.17\BTRS\BTRS-Client\bin\System.Web.Razor.xml
+C:\Users\MD. Rakib HASAN\Desktop\18.7.17\BTRS\BTRS-Client\bin\System.Web.Webpages.xml
+C:\Users\MD. Rakib HASAN\Desktop\18.7.17\BTRS\BTRS-Client\bin\System.Web.Webpages.Deployment.xml
+C:\Users\MD. Rakib HASAN\Desktop\18.7.17\BTRS\BTRS-Client\bin\System.Web.Webpages.Razor.xml
+C:\Users\MD. Rakib HASAN\Desktop\18.7.17\BTRS\BTRS-Client\bin\System.Web.Helpers.xml
+C:\Users\MD. Rakib HASAN\Desktop\18.7.17\BTRS\BTRS-Client\bin\System.Web.Mvc.xml
+C:\Users\MD. Rakib HASAN\Desktop\18.7.17\BTRS\BTRS-Client\obj\Release\BTRS-Client.csprojResolveAssemblyReference.cache
+C:\Users\MD. Rakib HASAN\Desktop\18.7.17\BTRS\BTRS-Client\obj\Release\BTRS-Client.dll
+C:\Users\MD. Rakib HASAN\Desktop\18.7.17\BTRS\BTRS-Client\obj\Release\BTRS-Client.pdb
+C:\Users\MD Rakib Hasan\Desktop\Final - Copy\BTRS\BTRS-Client\bin\ApplicationInsights.config
+C:\Users\MD Rakib Hasan\Desktop\Final - Copy\BTRS\BTRS-Client\bin\roslyn\csc.exe
+C:\Users\MD Rakib Hasan\Desktop\Final - Copy\BTRS\BTRS-Client\bin\roslyn\csc.exe.config
+C:\Users\MD Rakib Hasan\Desktop\Final - Copy\BTRS\BTRS-Client\bin\roslyn\csc.rsp
+C:\Users\MD Rakib Hasan\Desktop\Final - Copy\BTRS\BTRS-Client\bin\roslyn\csi.exe
+C:\Users\MD Rakib Hasan\Desktop\Final - Copy\BTRS\BTRS-Client\bin\roslyn\csi.rsp
+C:\Users\MD Rakib Hasan\Desktop\Final - Copy\BTRS\BTRS-Client\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\MD Rakib Hasan\Desktop\Final - Copy\BTRS\BTRS-Client\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\MD Rakib Hasan\Desktop\Final - Copy\BTRS\BTRS-Client\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\MD Rakib Hasan\Desktop\Final - Copy\BTRS\BTRS-Client\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\MD Rakib Hasan\Desktop\Final - Copy\BTRS\BTRS-Client\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\MD Rakib Hasan\Desktop\Final - Copy\BTRS\BTRS-Client\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\MD Rakib Hasan\Desktop\Final - Copy\BTRS\BTRS-Client\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\MD Rakib Hasan\Desktop\Final - Copy\BTRS\BTRS-Client\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\MD Rakib Hasan\Desktop\Final - Copy\BTRS\BTRS-Client\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\MD Rakib Hasan\Desktop\Final - Copy\BTRS\BTRS-Client\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\MD Rakib Hasan\Desktop\Final - Copy\BTRS\BTRS-Client\bin\roslyn\System.AppContext.dll
+C:\Users\MD Rakib Hasan\Desktop\Final - Copy\BTRS\BTRS-Client\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\MD Rakib Hasan\Desktop\Final - Copy\BTRS\BTRS-Client\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\MD Rakib Hasan\Desktop\Final - Copy\BTRS\BTRS-Client\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\MD Rakib Hasan\Desktop\Final - Copy\BTRS\BTRS-Client\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\MD Rakib Hasan\Desktop\Final - Copy\BTRS\BTRS-Client\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\MD Rakib Hasan\Desktop\Final - Copy\BTRS\BTRS-Client\bin\roslyn\vbc.exe
+C:\Users\MD Rakib Hasan\Desktop\Final - Copy\BTRS\BTRS-Client\bin\roslyn\vbc.exe.config
+C:\Users\MD Rakib Hasan\Desktop\Final - Copy\BTRS\BTRS-Client\bin\roslyn\vbc.rsp
+C:\Users\MD Rakib Hasan\Desktop\Final - Copy\BTRS\BTRS-Client\bin\roslyn\VBCSCompiler.exe
+C:\Users\MD Rakib Hasan\Desktop\Final - Copy\BTRS\BTRS-Client\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\MD Rakib Hasan\Desktop\Final - Copy\BTRS\BTRS-Client\bin\BTRS-Client.dll.config
+C:\Users\MD Rakib Hasan\Desktop\Final - Copy\BTRS\BTRS-Client\bin\BTRS-Client.dll
+C:\Users\MD Rakib Hasan\Desktop\Final - Copy\BTRS\BTRS-Client\bin\BTRS-Client.pdb
+C:\Users\MD Rakib Hasan\Desktop\Final - Copy\BTRS\BTRS-Client\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Users\MD Rakib Hasan\Desktop\Final - Copy\BTRS\BTRS-Client\bin\Microsoft.AI.DependencyCollector.dll
+C:\Users\MD Rakib Hasan\Desktop\Final - Copy\BTRS\BTRS-Client\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\MD Rakib Hasan\Desktop\Final - Copy\BTRS\BTRS-Client\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Users\MD Rakib Hasan\Desktop\Final - Copy\BTRS\BTRS-Client\bin\Microsoft.AI.Web.dll
+C:\Users\MD Rakib Hasan\Desktop\Final - Copy\BTRS\BTRS-Client\bin\Microsoft.AI.WindowsServer.dll
+C:\Users\MD Rakib Hasan\Desktop\Final - Copy\BTRS\BTRS-Client\bin\Microsoft.ApplicationInsights.dll
+C:\Users\MD Rakib Hasan\Desktop\Final - Copy\BTRS\BTRS-Client\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\MD Rakib Hasan\Desktop\Final - Copy\BTRS\BTRS-Client\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\MD Rakib Hasan\Desktop\Final - Copy\BTRS\BTRS-Client\bin\System.Web.Helpers.dll
+C:\Users\MD Rakib Hasan\Desktop\Final - Copy\BTRS\BTRS-Client\bin\System.Web.Mvc.dll
+C:\Users\MD Rakib Hasan\Desktop\Final - Copy\BTRS\BTRS-Client\bin\System.Web.Razor.dll
+C:\Users\MD Rakib Hasan\Desktop\Final - Copy\BTRS\BTRS-Client\bin\System.Web.Webpages.Deployment.dll
+C:\Users\MD Rakib Hasan\Desktop\Final - Copy\BTRS\BTRS-Client\bin\System.Web.Webpages.dll
+C:\Users\MD Rakib Hasan\Desktop\Final - Copy\BTRS\BTRS-Client\bin\System.Web.Webpages.Razor.dll
+C:\Users\MD Rakib Hasan\Desktop\Final - Copy\BTRS\BTRS-Client\bin\Microsoft.AI.DependencyCollector.xml
+C:\Users\MD Rakib Hasan\Desktop\Final - Copy\BTRS\BTRS-Client\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\Users\MD Rakib Hasan\Desktop\Final - Copy\BTRS\BTRS-Client\bin\Microsoft.AI.Web.xml
+C:\Users\MD Rakib Hasan\Desktop\Final - Copy\BTRS\BTRS-Client\bin\Microsoft.AI.WindowsServer.xml
+C:\Users\MD Rakib Hasan\Desktop\Final - Copy\BTRS\BTRS-Client\bin\Microsoft.ApplicationInsights.xml
+C:\Users\MD Rakib Hasan\Desktop\Final - Copy\BTRS\BTRS-Client\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\MD Rakib Hasan\Desktop\Final - Copy\BTRS\BTRS-Client\bin\System.Web.Razor.xml
+C:\Users\MD Rakib Hasan\Desktop\Final - Copy\BTRS\BTRS-Client\bin\System.Web.Webpages.xml
+C:\Users\MD Rakib Hasan\Desktop\Final - Copy\BTRS\BTRS-Client\bin\System.Web.Webpages.Deployment.xml
+C:\Users\MD Rakib Hasan\Desktop\Final - Copy\BTRS\BTRS-Client\bin\System.Web.Webpages.Razor.xml
+C:\Users\MD Rakib Hasan\Desktop\Final - Copy\BTRS\BTRS-Client\bin\System.Web.Helpers.xml
+C:\Users\MD Rakib Hasan\Desktop\Final - Copy\BTRS\BTRS-Client\bin\System.Web.Mvc.xml
+C:\Users\MD Rakib Hasan\Desktop\Final - Copy\BTRS\BTRS-Client\obj\Release\BTRS-Client.csprojResolveAssemblyReference.cache
+C:\Users\MD Rakib Hasan\Desktop\Final - Copy\BTRS\BTRS-Client\obj\Release\BTRS-Client.dll
+C:\Users\MD Rakib Hasan\Desktop\Final - Copy\BTRS\BTRS-Client\obj\Release\BTRS-Client.pdb

@@ -1,0 +1,79 @@
+﻿
+<div>
+    <div class="container" style="margin-top:100px">
+        <div class="col-md-3" ng-show="userError!=null">
+            <div class="alert alert-danger">
+                <strong>{{userError}}<span class="glyphicon glyphicon-remove"></span> </strong>
+            </div>
+
+        </div>
+        <div class="col-md-3" ng-show="confirm==true">
+            <div class="alert alert-success">
+                <strong>Account has been created successfully..<span class="glyphicon glyphicon-ok"></span> </strong>
+            </div>
+
+        </div>
+        <div class="col-md-3" ng-show="confirm==false">
+            <div class="alert alert-danger">
+                <strong>Sorry cannot create an account..<span class="glyphicon glyphicon-remove"></span> </strong>
+            </div>
+
+        </div>
+        <div class="col-md-12" ng-controller="MainCtrl">
+            <div class="text-center">
+                <div style="width:33.33%;margin:0 auto;background-color:#93ca3a;padding:15px">
+                    <i class="fa fa-user-circle-o fa-5x"></i>
+                    <h4 style="color:#000;font-weight:bold">Create new user</h4>
+                    <form class="form-horizontal" role="form" id="regform" name="regform">
+                        <div class="form-group" ng-class="{'has-error':regform.email.$invalid && !regform.email.$pristine}">
+                            <label class="control-label">Email</label>
+                            <input type="email" name="email" class="form-control drop2 col-md-offset-1" placeholder="Enter Your Email Address.." ng-model="userInfo.Email" style="margin-left:55px" required />
+                            <div ng-show="regform.email.$error.required && !regform.email.$pristine" class="help-block">Email is Required!</div>
+                        </div>
+                        <div class="form-group" ng-class="{'has-error':regform.password.$invalid && !regform.password.$pristine}">
+                            <label class="control-label">Password</label>
+                            <input type="password" name="password" class="form-control drop2 col-md-offset-1" placeholder="Enter Passwors Here.." ng-model="userInfo.Password" style="margin-left:55px" required />
+                            <div ng-show="regform.password.$error.required && !regform.password.$pristine" class="help-block">Password is Required!</div>
+                        </div>
+                        <div class="form-group" ng-class="{'has-error':regform.rePassword.$invalid && !regform.rePassword.$pristine}">
+                            <label class="control-label">Confirm Password</label>
+                            <input type="password" class="form-control drop2 col-md-offset-1" placeholder="ReEnter Your Password.." name="rePassword" ng-pattern="userInfo.Password" ng-model="userInfo.ConfirmPassword" style="margin-left:55px" required />
+                            <div ng-show="regform.rePassword.$error.required && !regform.rePassword.$pristine" class="help-block">Confirm Password is Required!</div>
+                            <div ng-show="regform.rePassword.$error.pattern && !regform.rePassword.$pristine" class="help-block">Password does not match with First Password..!</div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-md-offset-1 col-md-10">
+                                <button type="submit" class="btn btn-default" ng-click="register()" ng-disabled="regform.$invalid">Create</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+
+
+            <!--<h3 style="color:#fff;font-weight:bold">Current users</h3>-->
+            <!--<table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th>Email</th>
+                        <th>HasRegistered</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>{{allUser.Email}}</td>
+                        <td>{{allUser.HasRegistered}}</td>
+                    </tr>
+                </tbody>
+            </table>-->
+        </div>
+    </div>
+
+</div>
+
+
+
+
+
+

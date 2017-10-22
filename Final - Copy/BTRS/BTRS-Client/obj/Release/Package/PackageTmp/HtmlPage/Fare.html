@@ -1,0 +1,102 @@
+﻿<br /><br /><br /><br />
+    <h2 style="text-align:right"><span class="color1">F</span>are</h2>
+    <!-- Trigger the modal with a button -->
+    <button type="button" class="button1 col-md-12" data-toggle="modal" data-target="#myModal">Insert</button>
+
+    <!-- Modal -->
+    <div id="myModal" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title"><strong>Fare</strong> </h4>
+                </div>
+                <div class="modal-body">
+                    <div>
+                        <input type="text" hidden ng-model="Fare.Id" />
+                       <label> Bus Id:</label>
+                        <select class="form-control" ng-model="Fare.BusId"
+                                ng-options="bs.Id as bs.BusType +' -'+ bs.BusScheduleId for bs in BusesList">
+                            <option value="" disabled selected>--- Select Bus ---</option>
+                        </select>
+                        <label>Departure Location:</label>
+                        <select class="form-control" ng-model="Fare.DepartureLocationId"
+                                ng-options="l.Id as l.LocationName for l in LocationList">
+                            <option value="" disabled selected>--- Select Departure Location ---</option>
+                        </select>
+                        <label>Destination Location:</label>
+                        <select class="form-control" ng-model="Fare.DestinationLocationId"
+                                ng-options="l.Id as l.LocationName disable when l.Id == Fare.DepartureLocationId for l in LocationList">
+                            <option value="" disabled selected>--- Select Destination Location ---</option>
+                        </select>
+                        <label>Amount:</label>
+                        <input type="text" class="form-control" placeholder="Enter Amount" ng-model="Fare.Amount" />
+                        <label>Additional Amount:</label>
+                        <input type="text" class="form-control" placeholder="Enter Additional Amount" ng-model="Fare.AdditionalAmount" />
+                        <label>Total Amount:</label>
+                        <input type="text" class="form-control" placeholder="Enter Total Amount" ng-model="Fare.TotalAmount" />
+
+                        <button class="btn btn-success" data-dismiss="modal" ng-click="SaveFare()">{{Action}}</button>
+                        <button class="btn btn-primary" data-dismiss="modal" ng-show="Back" ng-click="BackFare()">Back</button>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr />
+    <div class="col-md-12">
+        <table class="table table-bordered table-hover table-striped">
+            <tr>
+                <th>Id</th>
+                <th>Bus Id</th>
+                <th>Departure Location</th>
+                <th>Destination Location</th>
+                <th>Amount</th>
+                <th>Additional Amount</th>
+                <th>Total Amount</th>
+                <th>Action</th>
+            </tr>
+            <tr ng-repeat="f in FareList">
+                <td>{{f.Id}}</td>
+                <td>{{f.BusId}}</td>
+                <td>
+                    <div ng-switch="{{f.DepartureLocationId}}">
+                        <span ng-switch-when="1">{{LocationList[0].LocationName}}</span>
+                        <span ng-switch-when="2">{{LocationList[1].LocationName}}</span>
+                        <span ng-switch-when="3">{{LocationList[2].LocationName}}</span>
+                        <span ng-switch-when="4">{{LocationList[3].LocationName}}</span>
+                        <span ng-switch-when="5">{{LocationList[4].LocationName}}</span>
+                        <span ng-switch-when="6">{{LocationList[5].LocationName}}</span>
+                        <span ng-switch-when="7">{{LocationList[6].LocationName}}</span>
+                        <span ng-switch-when="8">{{LocationList[7].LocationName}}</span>
+                        <span ng-switch-default>This Application design for seven City, if you want to add more city Contract with App Developer</span>
+                    </div>
+                </td>
+                <td>
+                    <div ng-switch="{{f.DestinationLocationId}}">
+                        <span ng-switch-when="1">{{LocationList[0].LocationName}}</span>
+                        <span ng-switch-when="2">{{LocationList[1].LocationName}}</span>
+                        <span ng-switch-when="3">{{LocationList[2].LocationName}}</span>
+                        <span ng-switch-when="4">{{LocationList[3].LocationName}}</span>
+                        <span ng-switch-when="5">{{LocationList[4].LocationName}}</span>
+                        <span ng-switch-when="6">{{LocationList[5].LocationName}}</span>
+                        <span ng-switch-when="7">{{LocationList[6].LocationName}}</span>
+                        <span ng-switch-when="8">{{LocationList[7].LocationName}}</span>
+                        <span ng-switch-default>This Application design for seven City, if you want to add more city Contract with App Developer</span>
+                    </div>
+                </td>
+                <td>{{f.Amount}}</td>
+                <td>{{f.AdditionalAmount}}</td>
+                <td>{{f.TotalAmount}}</td>
+                <td>
+                    <button class="btn button2" data-toggle="modal" data-target="#myModal" ng-click="EditFare(f)">Edit</button>
+                    <button class="btn btn-danger" disabled ng-click="DeleteFare(f.Id)">Delete</button>
+                </td>
+            </tr>
+        </table>
+    </div>

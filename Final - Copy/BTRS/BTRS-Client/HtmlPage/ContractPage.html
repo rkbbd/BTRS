@@ -1,0 +1,57 @@
+﻿<br /><br /><br /><br />
+    <div ng-controller="ContractCtrl">
+        <h2 style="text-align:right"><span class="color1">C</span>ontract</h2>
+        <!-- Trigger the modal with a button -->
+        <button type="button" class="button1 col-md-12" data-toggle="modal" data-target="#myModal">Insert</button>
+        <!-- Modal -->
+        <div id="myModal" class="modal fade" role="dialog">
+            <div class="modal-dialog">
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title"><strong>Contract</strong> </h4>
+                    </div>
+                    <div class="modal-body">
+                        <div>
+                            <input type="text" hidden ng-model="Contract.Id" />
+                            <label>Name:</label>
+                            <input type="text" class="form-control" placeholder="Enter Name" ng-model="Contract.Name" />
+                            <label>Email:</label>
+                            <input type="text" class="form-control" placeholder="Enter Email" ng-model="Contract.Email" />
+                            <label>Message:</label>
+                            <input type="text" class="form-control" placeholder="Enter Message" ng-model="Contract.Message" />
+                            <button class="btn btn-success" data-dismiss="modal" ng-click="SaveContract()">{{Action}}</button>
+                            <button class="btn btn-primary" data-dismiss="modal" ng-show="Back" ng-click="BackContract()">Back</button>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <hr />
+        <div>
+            <table class="table table-bordered table-hover table-striped">
+                <tr>
+                    <th>Id</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Message</th>
+                    <th>Action</th>
+                </tr>
+                <tr ng-repeat="C in ContractList">
+                    <td>{{C.Id}}</td>
+                    <td>{{C.Name}}</td>
+                    <td>{{C.Email}}</td>
+                    <td>{{C.Message}}</td>
+                    <td>
+                        <button class="btn button2" data-toggle="modal" data-target="#myModal" ng-click="EditContract(C)">Edit</button>
+                        <button class="btn btn-danger" ng-click="DeleteContract(C.Id)">Delete</button>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>

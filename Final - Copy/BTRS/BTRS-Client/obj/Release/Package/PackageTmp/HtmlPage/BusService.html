@@ -1,0 +1,69 @@
+﻿<br /><br /><br /><br />
+    <h2 style="text-align:right">Bus <span class="color1">S</span>ervice</h2>
+    <!-- Trigger the modal with a button -->
+    <button type="button" class="button1 col-md-12" data-toggle="modal" data-target="#myModal">Insert</button>
+
+    <!-- Modal -->
+    <div id="myModal" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title"><strong>Service</strong> </h4>
+                </div>
+                <div class="modal-body">
+                    <div>
+                        <input type="text" hidden ng-model="Bus.Id" />
+
+                        <label>Bus Type:</label>
+                        <select class="form-control" ng-model="Bus.BusType">
+                            <option value="" disabled selected>--- Select Bustype ---</option>
+                            <option value="General">General</option>
+                            <option value="AC">AC</option>
+                            <option value="Business Class">Business Class</option>
+                        </select>
+
+                        <label>No Of Seat:</label>
+                        <input type="text" class="form-control" placeholder="Enter No of seat" ng-model="Bus.NoOfSeat" />
+                        <label>Bus Schedule ID:</label>
+                        <select id="Select1" class="form-control" ng-model="Bus.BusScheduleId"
+                                ng-options="bs.Id as bs.Id for bs in BusScheduleList">
+                            <option value="" disabled selected>--- Select Bus Schedule ---</option>
+                        </select>
+
+                        <button class="btn btn-success" data-dismiss="modal" ng-click="SaveBus()">{{Action}}</button>
+                        <button class="btn btn-primary" data-dismiss="modal" ng-show="Back" ng-click="BackBus()">Back</button>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    
+    <hr />
+    <div>
+        <table class="table table-bordered table-hover table-striped">
+            <tr>
+                <th>Id</th>
+                <th>Bus Type</th>
+                <th>No Of Seat</th>
+                <th>Bus Schedule Id</th>
+                <th>Action</th>
+            </tr>
+            <tr ng-repeat="b in BusesList">
+                <td>{{b.Id}}</td>
+                <td>{{b.BusType}}</td>
+                <td>{{b.NoOfSeat}}</td>
+                <td>{{b.BusScheduleId}}</td>
+                <td>
+                    <button class="btn button2" data-toggle="modal" data-target="#myModal" ng-click="EditBus(b)">Edit</button>
+                    <button class="btn btn-danger" disabled ng-click="DeleteBus(b.Id)">Delete</button>
+                </td>
+            </tr>
+        </table>
+    </div>

@@ -1,0 +1,48 @@
+﻿<br /><br /><br /><br />
+    <h2 style="text-align:right"><span class="color1">L</span>ocation</h2>
+    <!-- Trigger the modal with a button -->
+    <button type="button" class="button1 col-md-12" data-toggle="modal" data-target="#myModal">Insert</button>
+    <!-- Modal -->
+    <div id="myModal" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title"><strong>Location</strong> </h4>
+                </div>
+                <div class="modal-body">
+                    <div>
+                        <input type="text" hidden ng-model="Location.Id" />
+                       <label>Location Name:</label>
+                        <input type="text" class="form-control" placeholder="Enter Location" ng-model="Location.LocationName" />
+
+                        <button class="btn btn-success" data-dismiss="modal" ng-click="SaveLocation()">{{Action}}</button>
+                        <button class="btn btn-primary" data-dismiss="modal" ng-show="Back" ng-click="BackLocation()">Back</button>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+	<hr />
+	<div>
+		<table class="table table-bordered table-hover table-striped">
+			<tr>
+				<th>Id</th>
+				<th>Location Name</th>
+				<th>Action</th>
+			</tr>
+			<tr ng-repeat="l in LocationList">
+				<td>{{l.Id}}</td>
+				<td>{{l.LocationName}}</td>
+				<td>
+					<button class="btn button2" data-toggle="modal" data-target="#myModal" ng-click="EditLocation(l)">Edit</button>
+					<button class="btn btn-danger" disabled ng-click="DeleteLocation(l.Id)">Delete</button>
+				</td>
+			</tr>
+		</table>
+	</div>

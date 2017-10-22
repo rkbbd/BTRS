@@ -1,0 +1,45 @@
+﻿
+Write here what r u doing now....!
+
+
+
+1. Hasnat: 
+
+2. Zulfikar: 
+
+3. Khairul: 
+
+4. Rakib(Group Leader): 
+
+
+
+::::Rakib:::
+#Note:
+BusSchedule> Departure Location and	Destination Location may be not need
+Fare > BusId > Not BusSchedule Id
+
+
+#2
+Server
+public Nullable<int> PaymentId { get; set; } not need
+public int UserId { get; set; } or name
+
+paymentCode-after payment paymentCode input
+
+isVarify bool
+if True Get all transation
+
+
+
+Server:
+http://localhost:3099/odata/Buses
+
+Client:
+http://localhost:3118/Index.html
+
+OData Url:
+http://localhost:3099/odata/Fares()?$filter=DepartureLocationId eq 1 and DestinationLocationId eq 2
+http://localhost:3099/odata/BusSchedules()?$filter=DepartureTime eq '2.00 PM'
+
+http://localhost:3099/odata/Locations()?$select=LocationName
+

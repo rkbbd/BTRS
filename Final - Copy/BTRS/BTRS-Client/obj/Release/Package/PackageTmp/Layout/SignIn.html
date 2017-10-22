@@ -1,0 +1,57 @@
+﻿<br />
+<br />
+<br />
+<br />
+<br />
+
+
+
+<div id="loginDiv">
+    <div class="col-md-4 col-md-offset-4">
+        <div class="loginTitlePanel">
+            <div class="text-center" style="">
+                <span class="fa fa-bus fa-5x"></span>
+                <span style="color:#93ca3a;font-size:30px;text-align:center">Admin Panel</span>
+            </div>
+
+        </div>
+        <div style="margin-left:30px">
+           
+            <p style="text-align:center">You must login to access the resource.</p>
+            <p style="color:#ff1a1a">{{loginErr}}</p>
+        </div>
+
+
+        <div class="text-center" style="margin-left:30px">
+
+            <form name="loginForm">
+                <div class="form-group">
+                    <div class="input-group">
+                        <span class="input-group-addon" style="width:0"><span class="glyphicon glyphicon-user"></span></span>
+                        <input type="email" class="drop2 form-control" ng-model="loginModel.username" required placeholder="Enter Your Email" style="width:300px" name="username" id="username" />
+                    </div>
+                    <div ng-show="loginForm.username.$error.required && !loginForm.username.$pristine" class="help-block">Email Address Is Required!</div>
+
+
+                </div>
+                <div class="form-group">
+                    <div class="input-group">
+                        <span class="input-group-addon" style="width:0"><span class="glyphicon glyphicon-lock"></span></span>
+                        <input type="password" class="drop2 form-control" ng-model="loginModel.password" placeholder="Enter Your Passward" required style="width:300px" name="password" id="password" />
+                    </div>
+                    <div ng-show="loginForm.password.$error.required && !loginForm.password.$pristine" class="help-block">Password Is Required!</div>
+
+
+                </div>
+                <div class="form-group">
+                    <div class="input-group">
+                        <input type="button" value="Log In" class="btn btn-default text-center" ng-disabled="loginForm.$invalid" ng-click="signin()" />
+                    </div>
+                </div>
+            </form>
+        </div>
+
+
+    </div>
+</div>
+

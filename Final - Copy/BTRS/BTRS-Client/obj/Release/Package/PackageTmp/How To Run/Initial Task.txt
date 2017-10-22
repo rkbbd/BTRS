@@ -1,0 +1,40 @@
+﻿
+
+
+
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+
+                                    Please follow the step listed bellow
+
+
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+
+1. Update-database (Tools > NuGet Package Manager > Package Manager Console > (if see red error message ignore it) 
+	> (PM) >(write: Update-database ) > Default Project drop down select > BTRS-Base> Press Enter Key ). 
+2. Solution Explorer > Solution BTRS > (Right Click) Set Startup Project > Multiple Startup Project> (Action) Start > OK.
+3. Build Project (F6)
+4. Run Project (Ctrl + F5) or Debug > start without debugging...
+5. Check Browser Tab, http://localhost:3118 use this tab,
+
+6. Sign In for Admin Access
+   UserName: rakib@admin.com
+   Password: 01684859599
+
+7. Payment Info: write amount and quentity 
+   Email: btrs@gmail.com
+   Password: ccslbtrs
+
+
+
+
+
+
+
+
+
+
+
+
+   --MD RAKIB HASAN

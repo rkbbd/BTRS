@@ -1,0 +1,72 @@
+﻿<br /><br /><br /><br />
+    <h2 style="text-align:right"><span class="color1">T</span>ransaction</h2>
+    <div>
+        <input type="text" hidden ng-model="Transaction.Id" />
+        TicketNo:
+        <input type="text" class="form-control" placeholder="Enter TicketNo" ng-model="Transaction.TicketNo" />
+        BusId:
+        <input type="text" class="form-control" placeholder="Enter BusId" ng-model="Transaction.BusId" />
+        DestinationLocationId:
+        <input type="text" class="form-control" placeholder="Enter Destination LocationId" ng-model="Transaction.DestinationLocationId" />
+        DepartureLocationId:
+        <input type="text" class="form-control" placeholder="Enter Departure LocationId" ng-model="Transaction.DepartureLocationId" />
+        TravelDate:
+        <input type="text" class="form-control" placeholder="Enter Travel Date" ng-model="Transaction.TravelDate" />
+        BookingDate:
+        <input type="text" class="form-control" placeholder="Enter Booking Date" ng-model="Transaction.BookingDate" />
+        Time:
+        <input type="text" class="form-control" placeholder="Enter Time" ng-model="Transaction.Time" />
+        ReservedSeat:
+        <input type="text" class="form-control" placeholder="Enter Reserved Seat" ng-model="Transaction.ReservedSeat" />
+        AmountTaka:
+        <input type="text" class="form-control" placeholder="Enter AmountTaka" ng-model="Transaction.AmountTaka" />
+        FareId:
+        <input type="text" class="form-control" placeholder="Enter FareId" ng-model="Transaction.FareId" />
+        PaymentId:
+        <input type="text" class="form-control" placeholder="Enter PaymentId" ng-model="Transaction.PaymentId" />
+        UserName:
+        <input type="text" class="form-control" placeholder="Enter UserName" ng-model="Transaction.UserName" />
+
+        <button class="btn button1 col-md-12" ng-click="SaveTransaction()">{{Action}}</button>
+        <button class="btn btn-primary" ng-show="Back" ng-click="BackTransaction()">Back</button>
+    </div>
+    <hr />
+    <div>
+        <table class="table table-bordered table-hover table-striped">
+            <tr>
+                <th>Id</th>
+                <th>TicketNo</th>
+                <th>BusId</th>
+                <th>Destination LocationId</th>
+                <th>Departure LocationId</th>
+                <th>Travel Date</th>
+                <th>BookingDate</th>
+                <th>Time</th>
+                <th>Reserved Seat</th>
+                <th>AmountTaka</th>
+                <th>Fare Id</th>
+                <th>Payment Id</th>
+                <th>User Name</th>
+                <th>Action</th>
+            </tr>
+            <tr ng-repeat="t in TransactionList">
+                <td>{{t.Id}}</td>
+                <td>{{t.TicketNo}}</td>
+                <td>{{t.BusId}}</td>
+                <td>{{t.DestinationLocationId}}</td>
+                <td>{{t.DepartureLocationId}}</td>
+                <td>{{t.TravelDate}}</td>
+                <td>{{t.BookingDate}}</td>
+                <td>{{t.Time}}</td>
+                <td>{{t.ReservedSeat}}</td>
+                <td>{{t.AmountTaka}}</td>
+                <td>{{t.FareId}}</td>
+                <td>{{t.PaymentId}}</td>
+                <td>{{t.UserName}}</td>
+                <td>
+                    <button class="btn button2" ng-click="EditTransaction(t)">Edit</button>
+                    <button class="btn btn-danger" ng-click="DeleteTransaction(t.Id)">Delete</button>
+                </td>
+            </tr>
+        </table>
+    </div>

@@ -1,0 +1,50 @@
+﻿/*@media print {
+    @page{
+    size: 297mm 210mm;
+    margin:25mm;
+    margin-right:45mm;
+}
+    #PrintTicket{
+    width:1100px;
+    height:800px;
+}
+}*/
+@media print{
+    body {font-size: 20pt;background-color:blue}
+}
+@media screen{
+    body{font-size:28px}
+    .TicketLogo {
+    height: 130px;
+    width: 170px;
+    border-width: 0px;
+}
+
+.textcolor{
+    color:dimgrey
+}
+.arial18{
+    padding:0px 5px 0px 5px
+}
+.redText{
+    color:brown
+}
+.gap{
+    padding:0px 10px 0px 5px
+}
+.Rgap{
+    padding:0px 0px 0px 5px
+}
+.Lgap{
+    padding:0px 5px 0px 0px
+}
+.BusTag{
+    text-align:center;
+    color:darkgrey
+}
+
+}
+@media screen, print{
+    body{line-height:1.3}
+}
+

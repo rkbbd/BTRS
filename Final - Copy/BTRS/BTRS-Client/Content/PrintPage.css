@@ -1,0 +1,25 @@
+﻿.textcolor{
+    color:dimgrey
+}
+.arial18{
+    padding:0px 5px 0px 5px
+}
+.redText{
+    color:brown
+}
+.gap{
+    padding:0px 10px 0px 5px
+}
+.Rgap{
+    padding:0px 0px 0px 5px
+}
+.Lgap{
+    padding:0px 5px 0px 0px
+}
+.BusTag{
+    text-align:center;
+    color:darkgrey
+}
+.TicketLogo {
+    width: 170px;
+}

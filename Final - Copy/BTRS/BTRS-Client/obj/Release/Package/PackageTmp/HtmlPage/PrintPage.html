@@ -1,0 +1,182 @@
+﻿<br /><br /><br /><br />
+    <div class="col-md-5">
+        <label>Enter Ticket no:</label>
+        <input type="text" class="form-control" name="name" ng-model="Search.Ticket" />
+        <button class="btn button2" ng-click="Print()">Search</button>
+    </div>
+   
+    <div class="col-md-7"  ng-show="TransactionList[0].ReservedSeat != null">
+        <div id="PrintTicket">
+            <table style="border-style:double; align-items:center">
+                <tr>
+                    <td colspan="3" align="Center" style="border-bottom: 2px solid gray; padding-bottom:1px ">
+                        <img src="../Layout/images/Logo/logo.png" style="width:170px" class="TicketLogo" />
+                        <p><b>7<span style="color:#93ca3a">C</span>ity</b></p>
+                    </td>
+                    <td align="left" colspan="3" style="color:dimgray; border-bottom:2px solid gray; padding-bottom: 5px">
+                        <b> The 7City Co.</b><br>
+                        Jatrabari, Dhaka,Bangladesh<br />
+                        <span>Telephone:</span> +88 01710462677<br />
+                        <span>FAX:</span> +1 800 889 9898<br />
+                        E-mail: <a href="#">rakib@gmail.com</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="Rgap" style="padding:0px 0px 0px 5px">
+                        Ticket Number
+                    </td>
+                    <td class="arial18" style="padding:0px 5px 0px 5px">
+                        :
+                    </td>
+                    <td colspan="4" class="redText" style="color:brown">
+                        <span>
+                            <strong>
+                                {{TransactionList[0].TicketNo}}
+                            </strong>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="arial18" style="padding:0px 5px 0px 5px">
+                        Location
+                    </td>
+                    <td class="arial18" style="padding:0px 5px 0px 5px">
+                        :
+                    </td>
+                    <td colspan="4">
+                        <span>
+                            <strong>
+                                <span ng-repeat="L in LList | filter: { Id: TransactionList[0].DepartureLocationId} : true">
+                                    <span>{{L.LocationName}}</span>
+                                </span> To
+                                <span ng-repeat="L in LList | filter: { Id: TransactionList[0].DestinationLocationId} : true">
+                                    <span>{{L.LocationName}}</span>
+                                </span>
+                            </strong>
+                        </span>
+                    </td>
+
+                </tr>
+                <tr>
+                    <td class="arial18" style="padding:0px 5px 0px 5px">
+                        Type
+                    </td>
+                    <td class="arial18" style="padding:0px 5px 0px 5px">
+                        :
+                    </td>
+                    <td>
+                        <span>
+                            <strong>
+                                <span ng-repeat="B in PBusList | filter: { Id: TransactionList[0].BusId} :true ">
+                                    <span>{{B.BusType}}</span>
+                                </span>
+                            </strong>
+                        </span>
+                    </td>
+                    <td class="gap" style="padding:0px 10px 0px 5px">
+                        Booking Date
+                    </td>
+                    <td class="arial18" style="padding:0px 5px 0px 5px">
+                        :
+                    </td>
+                    <td class="Lgap" style="padding:0px 5px 0px 0px">
+                        <span>
+                            <strong>
+                                {{TransactionList[0].BookingDate|date : 'dd.MM.y'}}
+                            </strong>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="arial18" style="padding:0px 5px 0px 5px">
+                        Joutney Date
+                    </td>
+                    <td class="arial18" style="padding:0px 5px 0px 5px">
+                        :
+                    </td>
+                    <td>
+                        <span>
+                            <strong>
+                                {{TransactionList[0].TravelDate|date : 'dd.MM.y'}}
+                            </strong>
+                        </span>
+                    </td>
+                    <td class="gap" style="padding:0px 10px 0px 5px">
+                        Journey Time
+                    </td>
+                    <td class="arial18" style="padding:0px 5px 0px 5px">
+                        :
+                    </td>
+                    <td class="Lgap" style="padding:0px 5px 0px 0px">
+                        <span><strong>{{TransactionList[0].Time|| 'NoData'}}</strong></span>
+                    </td>
+
+                </tr>
+                <tr>
+                    <td class="arial18" style="padding:0px 5px 0px 5px">
+                        Seat No
+                    </td>
+                    <td class="arial18" style="padding:0px 5px 0px 5px">
+                        :
+                    </td>
+                    <td>
+                        <span>
+                            <strong>
+                                {{TransactionList[0].ReservedSeat}}
+                            </strong>
+                        </span>
+                    </td>
+                    <td class="gap" style="padding:0px 10px 0px 5px">
+                        No.of Passengers
+                    </td>
+                    <td class="arial18" style="padding:0px 5px 0px 5px">
+                        :
+                    </td>
+                    <td class="Lgap" style="padding:0px 5px 0px 0px">
+                        <span>
+                            <strong>
+                                {{TransactionList[0].ReservedSeat.length/2|| 'NoData'}}
+                            </strong>
+                        </span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="arial18" style="padding:0px 5px 0px 5px">
+                        Total Rent
+                    </td>
+                    <td class="arial18" style="padding:0px 5px 0px 5px">
+                        :
+                    </td>
+                    <td class="redText" style="color:brown">
+                        <span>
+                            <strong>
+                                {{TransactionList[0].AmountTaka}}
+                            </strong>
+                        </span>
+                    </td>
+                    <td colspan="3" class="BusTag Lgap">Connection people with people</td>
+                </tr>
+            </table>
+        </div>
+        <br />
+        <div class="col-md-offset-3">
+            <input style="width:110px" ng-show="TransactionList[0].ReservedSeat != null" type="button" value="Print" class="btn fa-linkedin" onclick="PrintDiv('PrintTicket')" />
+            <input style="width:110px" ng-show="TransactionList[0].ReservedSeat != null" type="button" value="Ticket Cancel" class="btn fa-linkedin btn-danger" ng-click="CancelTicket(TransactionList[0].Id)" />
+        </div>
+        </div>
+    <div class="col-md-12">
+        <script>
+            function PrintDiv(divname)
+            {
+                var printContents = document.getElementById(divname).innerHTML;
+                var oldPage = document.body.innerHTML;
+                document.body.innerHTML = "<html><head><title></title></head><body>" + printContents + "</body></html>";
+                window.print();
+                document.body.innerHTML = oldPage;
+            }
+        </script>
+        <br />
+    </div>
+
+
