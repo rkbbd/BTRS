@@ -18,13 +18,6 @@
 4. Run Project (Ctrl + F5) or Debug > start without debugging...
 5. Check Browser Tab, http://localhost:3118 use this tab,
 
-6. Sign In for Admin Access
-   UserName: rakib@admin.com
-   Password: 01684859599
-
-7. Payment Info: write amount and quentity 
-   Email: btrs@gmail.com
-   Password: ccslbtrs
 
 
 
